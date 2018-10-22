@@ -4,6 +4,9 @@
 			<span class="left">
 				微信
 			</span>
+			<img class="add" src="./assets/img/add.png"/>
+			<img class="search" src="./assets/img/search.png"/>
+			
 		</header>
 		<nav>
 			<router-link class='wrap' to='/chats' style='background-image: url(/src/assets/img/chats.png)'>
@@ -56,6 +59,13 @@
 		font-size: 1.6rem;
 		overflow: hidden;
 		z-index: 9;
+		
+		img{
+			float: right;
+			width: 1.6rem;
+			height: 1.6rem;
+			margin: 1.2rem 1.2rem;
+		}
 	}
 	.left{
 		line-height: 4rem;
@@ -69,7 +79,7 @@
 		opacity: 1;
 		height: 5rem;
 		background: white;
-		border-top: 1px solid silver;
+		border-top: 1px solid #EDEDED;
 		.wrap{
 			background-position: center center;
 			background-repeat: no-repeat;

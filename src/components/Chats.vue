@@ -13,7 +13,7 @@
 	export default {
 		data() {
 			return {
-				msg: '我是chats界面',
+				msg: '',
 				list: " ",
 			}
 		},

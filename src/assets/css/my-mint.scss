@@ -1,0 +1,54 @@
+.mint-indexlist {
+    margin-bottom: 5rem;
+}
+
+.mint-indexlist-nav {
+    border-left: none;
+    overflow-y: hidden;
+    opacity: 1;
+    z-index: 8;
+    background: transparent;
+}
+
+.mint-indexlist-content {
+    margin-right: 0 !important;
+    li:first-child {
+        p {
+            display: none;
+        }
+    }
+    li:nth-child(2) {
+        p {
+            display: none;
+        }
+    }
+    li:nth-last-child(2) {
+        p {
+            display: none;
+        }
+    }
+    li:last-child{
+        p{
+            height: 2rem;
+            line-height: 2rem;
+            text-align: center;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.mint-indexsection-index {
+    height: 0.3rem;
+    line-height: 0.3rem;
+    font-size: 1rem;
+    background-color: lightgray;
+    color: gray;
+    width: 100%;
+    padding: 10px 0;
+    text-indent: 10px;
+}
+.mint-indexlist-navlist{
+    li:last-child{
+        display: none;
+    }
+}
