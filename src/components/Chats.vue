@@ -5,35 +5,48 @@
 				<img :src="item.src"><span>{{item.title}}</span>
 			</li>
 		</ul>
-		<img src="" />
 	</div>
 </template>
 
 <script>
+	
+	import store from '../vuex/store.js'
+	
 	export default {
 		data() {
 			return {
 				msg: '',
-				list: " ",
+				list: '',
 			}
 		},
+		store,  				//实例化store
 		mounted() {
-			this.getData();
+			//判断store里面有无数据
+			var listData = this.$store.state.list;
+			
+			if(listData.length > 0){
+				this.list = listData;
+			}else{
+				this.getData();
+			}
+			
 		},
 		methods: {
-
 			getData() {
-
 				var api = 'http://localhost:8080/src/assets/chats.json';
 
 				this.$http.get(api).then((response) => {
+					//先请求一次，再进行缓存
 					this.list = response.data.result;
-					console.log(response);
+					//数据放在store里
+					this.$store.commit('cacheData', response.data.result)
+					
 				}, (err) => {
 					console.log(err);
-				})
+				}) 
 			}
 		}
+		
 
 	}
 </script>
@@ -57,11 +70,10 @@
 				top: .6rem;
 				left: 6rem;
 			}
-		}
-		.lilist:last-child {
-			margin-bottom: 3rem;
-			border: 0;
+			&:last-child {
+				margin-bottom: 5rem;
+				border: 0;
+			}
 		}
 	}
-	
 </style>

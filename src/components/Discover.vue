@@ -68,7 +68,6 @@
 			font-size:1.4rem;
 			padding-top: .3rem ;
 			padding-bottom:  .2rem;
-			
 			margin-left: 1rem;
 			margin-right: 1rem;
 			img{
